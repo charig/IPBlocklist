@@ -1,4 +1,4 @@
-# IP Blocklist Serviceipblocklist
+# IP Blocklist Service
 
 This is a simple REST API service built with Quarkus that checks if an IP address is in a blocklist.
 
@@ -33,11 +33,15 @@ java -jar target/quarkus-app/quarkus-run.jar
 ```
 curl http://localhost:8080/ips/192.168.1.1
 ```
+The API should return true or false depending on whether the IP address is in the blocklist.
 
 * Build a native image (linux executable):
 ```
 ./mvnw package -Pnative -Dquarkus.native.container-build=true
 ```
+
+## Docker
+You can also run the application in a Docker container. To build the container, run:
 
 * Build a docker container with the native image:
 ```
@@ -47,20 +51,6 @@ docker build -f src/main/docker/Dockerfile.native -t ip-blocklist .
 * Run the container locally
 ```
 docker run -it -p{localhostPort}:{containerPort} ip-blocklist
-```
-
-The API should return true or false depending on whether the IP address is in the blocklist.
-
-## Docker
-You can also run the application in a Docker container. To build the container, run:
-
-```shell script
-docker build -t ip-blocklist-service .
-```
-
-To run the container, use the following command:
-```shell script
-docker run -p 8080:8080 -e CONFIG_URL=<blocklist-url> ip-blocklist-service
 ```
 
 ## Configurations
