@@ -3,11 +3,11 @@
 This is a simple REST API service built with Quarkus that checks if an IP address is in a blocklist.
 
 ## Features
-* Uses [Quarkus](https://quarkus.io/). 
+* Developed using [Quarkus](https://quarkus.io/) 
 * Checks if an IP address is blocked using a blocklist retrieved from a URL
 * Supports only IPv4
-* Uses [Caffeine cache](https://github.com/ben-manes/caffeine) to improve performance and reduce the number of requests to the blocklist URL.
-* Updates the blocklist automatically every 24 hours.
+* Uses [Caffeine cache](https://github.com/ben-manes/caffeine) to improve performance and reduce the number of requests to the blocklist URL
+* Updates the blocklist automatically every 24 hours
 
 ## Requirements
 * Java 11 or higher
