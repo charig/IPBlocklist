@@ -24,6 +24,11 @@ git clone https://github.com/charig/IPBlocklist
 ./mvnw package
 ```
 
+* Test the application: 
+```
+./mvnw test
+```
+
 * Run the application: 
 ```
 java -jar target/quarkus-app/quarkus-run.jar
